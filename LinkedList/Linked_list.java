@@ -38,15 +38,30 @@ public class Linked_list {
         System.out.print(node.data+"--> ");
         printLinkedList(node.next);
     }
+    public void addMid(int idx,int data){
+        if(idx == 0){
+            addFirst(data);
+        }
+        int curridx = 0;
+        Node temp = head;
+        while(curridx<idx-1){
+            temp = temp.next;
+            curridx++;
+        }
+        Node newNode = new Node(data);                     // 1-->2-->4
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
     public static void main(String[] args) {
         Linked_list ll = new Linked_list(); 
-        ll.addFirst(2);
+        ll.addFirst(3);
         ll.addFirst(1);
-        ll.addLast(3);
         ll.addLast(4);
-        printLinkedList(head);
         ll.addLast(5);
-        ll.addLast(6);
+        printLinkedList(head);
+        ll.addMid(1, 2);
+        printLinkedList(head);
+        ll.addMid(3, 8);
         printLinkedList(head);
     }
 }
