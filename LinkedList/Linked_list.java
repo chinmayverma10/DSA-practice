@@ -19,8 +19,6 @@ public class Linked_list {
             head = tail = newNode;
             return;
         }
-
-
         newNode.next = head;
         head = newNode;
     }

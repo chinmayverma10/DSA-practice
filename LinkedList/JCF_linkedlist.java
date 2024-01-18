@@ -9,7 +9,8 @@ public class JCF_linkedlist {
 
         //remove
         System.out.println(ll);
-        ll.removeFirst();
+        // ll.removeFirst();
         System.out.println(ll);
+        System.out.println(ll.get(0));;
     }
 }
