@@ -89,5 +89,6 @@ public class DoubleLL{
         ll.reverse();
         System.out.println(size);
         ll.printll();
+        System.out.println("hello");
     }
 }
